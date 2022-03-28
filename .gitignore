@@ -1,0 +1,9 @@
+# ignore pdf and word doc
+*.pdf
+*.doc
+*.docx
+*.dox
+# ignore compiled files
+bin/
+# ignore mac native files
+*.DS_Store
