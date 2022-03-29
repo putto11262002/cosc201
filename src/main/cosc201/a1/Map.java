@@ -33,6 +33,14 @@ public class Map {
   }
 
   /**
+   * Set seed for RNG for flood function
+   * @param seed
+   */
+  public void setSeed(long seed){
+    R.setSeed(seed);
+  }
+
+  /**
    * Floods the map so that each cell is water with a given probability.
    * This is a convenience method to help with answering question 2.
    * 
