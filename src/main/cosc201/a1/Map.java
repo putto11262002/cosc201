@@ -13,7 +13,7 @@ public class Map {
 
   static final boolean LAND = true;
   static final boolean WATER = false;
-  static final char WATER_CHAR = '.';
+  static final char WATER_CHAR = '.'; // change from . to & as it is easier to distinguish between land and sea
   static final char LAND_CHAR = '#';
   static final int[] DIFFS = {-1, 0, 1};
 
@@ -32,11 +32,18 @@ public class Map {
     this.map = new boolean[rows][cols];
   }
 
+  public Map(int rows, int cols, long seed) {
+    this.rows = rows;
+    this.cols = cols;
+    this.map = new boolean[rows][cols];
+    this.setSeed(seed);
+  }
+
   /**
    * Set seed for RNG for flood function
    * @param seed
    */
-  public void setSeed(long seed){
+  private void setSeed(long seed){
     R.setSeed(seed);
   }
 
